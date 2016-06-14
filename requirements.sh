@@ -5,19 +5,19 @@ OS=$(lsb_release -si)
 case $OS in
   Debian)
     # supervisor
-    sudo apt-get install supervisor
+    sudo apt-get -y install supervisor
 
     # javascript
-    sudo apt-get install nodejs nodejs-dev npm
+    sudo apt-get -y install nodejs nodejs-dev npm
     sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
     ;;
 
   Ubuntu)
     # build
-    sudo apt-get install git cmake build-essential
+    sudo apt-get -y install git cmake build-essential
 
     # apache server
-    sudo apt-get install apache2
+    sudo apt-get -y install apache2
 
     # gcc/g++ 4.9
     #sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -26,21 +26,21 @@ case $OS in
     #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
 
     # geotiff
-    sudo apt-get install libgeotiff-dev
+    sudo apt-get -y install libgeotiff-dev
 
     # javascript
-    sudo apt-get install nodejs nodejs-dev npm
+    sudo apt-get -y install nodejs nodejs-dev npm
     sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
     # boost
-    sudo apt-get install libboost-dev
-    sudo apt-get install libboost-system-dev libboost-thread-dev libboost-filesystem-dev \
+    sudo apt-get -y install libboost-dev
+    sudo apt-get -y install libboost-system-dev libboost-thread-dev libboost-filesystem-dev \
 	libboost-program-options-dev libboost-regex-dev
 
     # gdal
-    sudo apt-get install gdal-bin libgdal1-dev
+    sudo apt-get -y install gdal-bin libgdal1-dev
 
     # supervisor
-    sudo apt-get install supervisor
+    sudo apt-get -y install supervisor
     ;;
 esac
