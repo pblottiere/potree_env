@@ -25,6 +25,9 @@ case $OS in
     #sudo apt-get install gcc-4.9 g++-4.9
     #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
 
+    # geotiff
+    sudo apt-get install libgeotiff-dev
+
     # javascript
     sudo apt-get install nodejs nodejs-dev npm
     sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
@@ -39,9 +42,5 @@ case $OS in
 
     # supervisor
     sudo apt-get install supervisor
-
-    # fix ldconfig
-    sudo echo "/usr/local/lib" > /etc/ld.so.conf
-    sudo ldconfig
     ;;
 esac

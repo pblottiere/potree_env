@@ -1,5 +1,11 @@
 #! /bin/sh
 
+if [ "$#" -ne 1 ]
+then
+	echo "I need a build directory..."
+	exit 1
+fi
+
 cd $1
 
 if [ $REBUILD = 'true' ]
