@@ -2,6 +2,9 @@
 
 DATADIR=/opt/data/terrain
 
+# requirements
+apt-get install wget
+
 # get data
 mkdir -p $DATADIR/las
 cd $DATADIR/las

@@ -27,5 +27,7 @@ then
 
   echo "Install $BUILDDIR ..."
   make install
+
+  cd $(dirname "$(readlink -f "$0")")
   cp greyhound.conf /var/greyhound/config.json
 fi
