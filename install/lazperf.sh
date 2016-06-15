@@ -13,7 +13,7 @@ cd $1
 if [ "$REBUILD" = 'true' ] && [ -d "$BUILDDIR" ]
 then
   echo "Uninstall $BUILDDIR ..."
-  cd laz-perf/build && sudo make uninstall && cd -
+  cd laz-perf/build && make uninstall && cd -
   rm -rf laz-perf
 fi
 
@@ -29,5 +29,5 @@ then
   make
 
   echo "Install $BUILDDIR ..."
-  sudo make install
+  make install
 fi
