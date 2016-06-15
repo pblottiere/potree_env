@@ -1,6 +1,7 @@
 #! /bin/sh
 
 BUILDDIR="greyhound"
+MYDIR=$(dirname "$(readlink -f "$0")")
 
 if [ "$#" -ne 1 ]
 then
@@ -28,6 +29,11 @@ then
   echo "Install $BUILDDIR ..."
   make install
 
-  cd $(dirname "$(readlink -f "$0")")
+  pwd
+  ls
+  cd $MYDIR
+  echo $MYDIR
+  pwd
+  ls
   cp greyhound.conf /var/greyhound/config.json
 fi
