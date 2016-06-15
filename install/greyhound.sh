@@ -17,7 +17,7 @@ then
   rm -rf greyhound
 fi
 
-if [ ! "-d $BUILDDIR" ]
+if [ ! -d "$BUILDDIR" ]
 then
   echo "Build $BUILDDIR in $1 ..."
 

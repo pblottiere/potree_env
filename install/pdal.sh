@@ -17,7 +17,7 @@ then
   rm -rf PDAL
 fi
 
-if [ ! "-d $BUILDDIR" ]
+if [ ! -d "$BUILDDIR" ]
 then
   echo "Build $BUILDDIR in $1 ..."
 

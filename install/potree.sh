@@ -18,7 +18,7 @@ then
   rm -rf "/var/www/html/potree/"
 fi
 
-if [ ! "-d $BUILDDIR" ]
+if [ ! -d "$BUILDDIR" ]
 then
   echo "Build $BUILDDIR in $1 ..."
 
