@@ -16,6 +16,3 @@ entwine build -i $DATADIR/las/LAS12_Sample_withRGB_Quick_Terrain_Modeler_fixed.l
 
 # add file in potree
 cd /potree_env/tests/potree_entwine_greyhound/terrain
-pwd
-ls
-cp greyhound_terrain.html /var/www/html/potree/examples

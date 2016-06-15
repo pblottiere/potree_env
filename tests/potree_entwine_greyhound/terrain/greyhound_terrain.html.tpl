@@ -72,7 +72,7 @@
 
         // Since this parameter to addPointCloud starts with the string
         // 'greyhound://', it is recognised as a greyhound server URL.
-        var server = "greyhound://192.168.1.19:8084/resource/"; //IP host / port host
+        var server = "greyhound://HOST_IP:HOST_PORT_GREYHOUND/resource/"; //IP host / port host
         var resource = "terrain";
 
 		viewer.addPointCloud(server + resource + "/");

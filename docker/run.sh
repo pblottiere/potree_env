@@ -1,4 +1,16 @@
 #! /bin/sh
 
-docker run -d -p 8083:80 -p 8084:81 potree
+HOST_IP=192.168.1.19
+HOST_PORT_WEB=8083
+HOST_PORT_GREYHOUND=8084
+
+# do not touch below this part
+DOCKER_WEB_PORT=80
+DOCKER_GREYHOUND_PORT=81
+
+#docker run -d -p 8083:80 -p 8084:81 potree
+docker run -e MY_HOST_IP=$HOST_IP \
+  -e MY_HOST_PORT_GREYHOUND=$HOST_PORT_GREYHOUND \
+  -d -p $HOST_PORT_WEB:$DOCKER_WEB_PORT \
+  -p $HOST_PORT_GREYHOUND:$DOCKER_GREYHOUND_PORT potree
 docker ps
