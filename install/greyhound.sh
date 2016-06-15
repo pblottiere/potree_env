@@ -24,8 +24,8 @@ then
   git clone https://github.com/hobu/greyhound
   cd greyhound
   make
-  cp config.template.js config.js
 
   echo "Install $BUILDDIR ..."
   make install
+  cp greyhound.conf /var/greyhound/config.json
 fi
