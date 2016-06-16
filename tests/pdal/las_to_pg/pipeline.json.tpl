@@ -1,0 +1,19 @@
+{
+  "pipeline":[
+    {
+      "type":"readers.las",
+      "filename":"LASFILE",
+      "spatialreference":"EPSG:26916"
+    },
+    {
+      "type":"filters.chipper",
+      "capacity":400
+    },
+    {
+      "type":"writers.pgpointcloud",
+      "connection":"host=HOST dbname=DATABASE user=USER",
+      "table":"example",
+      "compression":"dimensional"
+    }
+  ]
+}
