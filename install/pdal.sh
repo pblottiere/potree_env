@@ -23,6 +23,7 @@ then
 
   git clone https://github.com/PDAL/PDAL
   cd PDAL
+  git checkout scoped-enums
   mkdir build && cd build
   cmake -DWITH_LAZPERF=ON ..
   make
